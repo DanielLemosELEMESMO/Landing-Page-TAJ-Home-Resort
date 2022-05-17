@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Bloco = (props, child) => {
-  return <div></div>;
+const Bloco = (props) => {
+  return (
+    <div>
+      {props.children}
+    </div>
+  );
 };
 
 export default Bloco;

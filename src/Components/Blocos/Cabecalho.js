@@ -3,9 +3,11 @@ import Bloco from './Bloco';
 
 const Cabecalho = (props) => {
   return (
-    <Bloco>
-      <h1>CABECALHO</h1>
-    </Bloco>
+    <div>
+      <Bloco>
+        <h1>Olá {props.name}</h1>
+      </Bloco>
+    </div>
   );
 };
 
