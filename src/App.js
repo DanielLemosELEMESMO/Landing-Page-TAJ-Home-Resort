@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <Cabecalho name="Daniel" />
-      <Introducao/>
+      <Introducao />
     </div>
   );
 }

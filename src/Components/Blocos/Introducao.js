@@ -6,7 +6,10 @@ const Introducao = (props) => {
     <div>
       <Bloco>
         <h1>Olá</h1>
-        <img src="../../assets/images/logo grande.png" alt="Logo"/>
+        <img
+          src="https://stackblitz.com/files/react-rgfmwx/github/DanielLemosELEMESMO/Landing-Page-TAJ-Home-Resort/master/src/assets/images/logo%20grande.png"
+          alt="Logo"
+        />
       </Bloco>
     </div>
   );
