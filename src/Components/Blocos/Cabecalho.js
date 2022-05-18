@@ -4,7 +4,7 @@ import Bloco from './Bloco';
 const Cabecalho = (props) => {
   return (
     <div>
-     <img src="./imagens/logo" alt=""/>
+     <img src="./imagens/logo_pequena.png" alt=""/>
     </div>
   );
 };
