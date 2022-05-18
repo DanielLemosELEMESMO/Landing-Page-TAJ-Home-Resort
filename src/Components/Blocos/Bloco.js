@@ -4,4 +4,4 @@ const Bloco = (props) => {
   return <div>{props.children}</div>;
 };
 
-export default Bloco;
+export default Bloco
