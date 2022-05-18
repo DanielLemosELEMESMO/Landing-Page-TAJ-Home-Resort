@@ -4,9 +4,7 @@ import Bloco from './Bloco';
 const Cabecalho = (props) => {
   return (
     <div>
-      <Bloco>
-        <h1>Olá {props.name}</h1>
-      </Bloco>
+     <img src="./imagens/logo" alt=""/>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import './style.css';
 export default function App() {
   return (
     <div>
-      <Cabecalho name="Daniel" />
+      <Cabecalho/>
       <Introducao />
     </div>
   );
