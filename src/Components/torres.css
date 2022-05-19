@@ -1,4 +1,24 @@
-.area-torres{
+.area-torres {
   background-color: black;
   width: 100vw;
+}
+.flex-torres {
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* imagem */
+.torres-altas {
+  width: 270px;
+  height: 430px;
+}
+.torre-oeste{
+  width: 270px;
+  height: 430px;
+}
+.torres-baixa {
+  /* width: 304px;
+  height: 282px; */
 }

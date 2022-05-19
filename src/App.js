@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div className="main">
       <Cabecalho />
-      <Torres />
       <Introducao />
+      <Torres />
     </div>
   );
 }
