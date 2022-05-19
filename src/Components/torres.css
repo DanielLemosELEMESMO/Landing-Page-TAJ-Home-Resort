@@ -3,11 +3,14 @@
   width: 100vw;
 }
 .flex-torres {
-  width: 100vw;
+  width: 80vw;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.T-A{
+  display: flex;
 }
 /* imagem */
 .torres-altas {
@@ -21,4 +24,7 @@
 .torres-baixa {
   /* width: 304px;
   height: 282px; */
+}
+.torre-leste{
+  
 }
