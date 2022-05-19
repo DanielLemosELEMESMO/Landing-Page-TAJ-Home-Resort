@@ -1,10 +1,12 @@
 import React from 'react';
-
+import './Cabecalho.css';
 const Cabecalho = (props) => {
   return (
-    <div>
-      <p>iry</p>
-      <img src="./imagens/logo_pequena.png" alt="" />
+    <div className="head">
+      <img
+        src="https://stackblitz.com/files/react-behpjs/github/DanielLemosELEMESMO/Landing-Page-TAJ-Home-Resort/master/src/Components/imagens/desktop_logo_pequena.png"
+        alt="TAJ HOME RESORT"
+      />
     </div>
   );
 };
