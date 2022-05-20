@@ -1,8 +1,9 @@
-import React from 'react';
-import './torres.css';
+import React from "react";
+import "./Torres.styles.css";
+
 const torres = (props) => {
   return (
-    <div className="area-torres">
+    <div className="bloco torres">
       <div className="flex-torres">
         <div className="T-A">
           <img
@@ -16,7 +17,7 @@ const torres = (props) => {
             <h3>TORRE OESTE</h3>
             <p>
               Com 158 metros e 50 pavimentos, a torre oeste é a maior do
-              espírito santo.   Possui subsolo, térreo, garagem, pilotis e 47
+              espírito santo. Possui subsolo, térreo, garagem, pilotis e 47
               andares com apartamentos de alto padrão. Nesta torre os
               apartamentos possuem 3 suítes e um acabamento de luxo.   A maior
               planta possui 176,41m².   Serão 3 vagas de estacionamento por
@@ -33,9 +34,7 @@ const torres = (props) => {
             src="https://stackblitz.com/files/react-behpjs/github/DanielLemosELEMESMO/Landing-Page-TAJ-Home-Resort/master/src/Components/Imagens/Torres%201.png"
             alt="torre baixa"
           />
-          <div className='torre-leste'>
-
-          </div>
+          <div className="torre-leste"></div>
         </div>
       </div>
       {/* flex-torres */}

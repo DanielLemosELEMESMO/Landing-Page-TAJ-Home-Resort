@@ -1,5 +1,4 @@
 .area-torres {
-  background-color: black;
   width: 100vw;
 }
 .flex-torres {
@@ -9,7 +8,7 @@
   justify-content: center;
   align-items: center;
 }
-.T-A{
+.T-A {
   display: flex;
 }
 /* imagem */
@@ -17,7 +16,7 @@
   width: 270px;
   height: 430px;
 }
-.torre-oeste{
+.torre-oeste {
   width: 270px;
   height: 430px;
 }
@@ -25,6 +24,5 @@
   /* width: 304px;
   height: 282px; */
 }
-.torre-leste{
-  
+.torre-leste {
 }
