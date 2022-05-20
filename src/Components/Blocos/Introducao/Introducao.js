@@ -1,5 +1,5 @@
 import React from "react";
-import Botao from "../../Assets/Botao/Botao";
+import Botao from "../../Botao/Botao";
 import "./Introducao.styles.css";
 
 const Introducao = (props) => {
