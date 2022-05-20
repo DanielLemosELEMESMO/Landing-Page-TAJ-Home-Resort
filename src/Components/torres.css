@@ -1,30 +1,32 @@
 .area-torres {
   background-color: black;
   width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 .flex-torres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
   width: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.T-A{
-  display: flex;
 }
 /* imagem */
 .torres-altas {
   width: 270px;
   height: 430px;
 }
-.torre-oeste{
+.torre-leste,.torre-oeste{
   width: 270px;
-  height: 430px;
+  margin-top: 20px;
+  font-size: 14px;
 }
-.torres-baixa {
-  /* width: 304px;
-  height: 282px; */
+h3{
+  margin-bottom: 10px;
 }
-.torre-leste{
-  
+.torres-baixas {
+  width: 304px;
+  height: 282px;
 }

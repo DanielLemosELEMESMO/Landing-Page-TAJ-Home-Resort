@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="main">
       <Cabecalho />
-      <Introducao />
+      {/* <Introducao /> */}
       <Torres />
     </div>
   );
