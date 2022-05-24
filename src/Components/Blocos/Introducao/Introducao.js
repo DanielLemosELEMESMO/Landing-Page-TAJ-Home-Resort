@@ -1,5 +1,5 @@
-import React from 'react';
-import Botao from './Botao';
+import React from "react";
+import Botao from "../../Botao/Botao";
 
 const Introducao = (props) => {
   return (
