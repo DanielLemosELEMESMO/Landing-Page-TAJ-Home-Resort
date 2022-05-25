@@ -1,23 +1,32 @@
 import React from "react";
 import Botao from "../../Botao/Botao";
+import Barrinha from "../../Barrinha/Barrinha";
+
 import "./Introducao.styles.css";
 
 const Introducao = (props) => {
   return (
     <div className="bloco bloco-introducao">
-      <div styles="width:100px !important">
+      <div className="imagem-grande-desktop">
         <img
-          src="https://stackblitz.com/files/react-rgfmwx/github/DanielLemosELEMESMO/Landing-Page-TAJ-Home-Resort/master/src/Components/imagens/desktop_logo_grande.png"
+          src={require("../../Assets/Imagens/desktop_logo_grande.png")}
           alt=""
         />
+        <h1>Taj Home Resort</h1>
       </div>
 
       <div className="texto-principal">
         <p>
-          <span>O luxuojo Taj Home Resort</span> que já está em construção{" "}
-          <span>desafia o comum, te oferece o que é tão precioso na vida:</span>{" "}
-          mais tempo para aproveitar o que <span>vale a pena.</span> Aqui,{" "}
-          <span>cada segundo gasto é um segundo ganho.</span>
+          <span className="destaque">O luxuojo Taj Home Resort</span> que já
+          está em construção{" "}
+          <span className="destaque">
+            desafia o comum, te oferece o que é tão precioso na vida:
+          </span>{" "}
+          mais tempo para aproveitar o que{" "}
+          <span className="destaque">vale a pena.</span> <br /> Aqui,{" "}
+          <span className="destaque">
+            cada segundo gasto é um segundo ganho.
+          </span>
         </p>
       </div>
 
@@ -26,8 +35,9 @@ const Introducao = (props) => {
         className="button_outlined_yellow glow"
       />
 
-      <div>
-        <h3>VENHA CONHECER O PARAÍSO DAS ARÁBIAS, LOCALIZADO EM VILA VELHA</h3>
+      <div class="texto-final">
+        <h2>VENHA CONHECER O PARAÍSO DAS ARÁBIAS, LOCALIZADO EM VILA VELHA</h2>
+        <Barrinha larg={5} />
       </div>
     </div>
   );

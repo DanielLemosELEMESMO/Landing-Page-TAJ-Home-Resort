@@ -1,15 +1,34 @@
 import React from "react";
+import Botao from "../../Botao/Botao";
+import "./videoIntrodutorio.styles.css";
 
 const VideoIntrodutorio = (props) => {
   return (
-    <div>
-      <div>texto 1</div>
+    <div className="bloco bloco-videoIntrodutorio">
+      <div className="titulo">
+        <h2 className="destaque" styles>
+          No Taj Home Resort, você se apaixona pela sua vida, dia após dia
+        </h2>
+      </div>
 
-      <div>texto 2</div>
+      <div className="subtitulo">
+        <p>
+          Esse não é um empreendimento apenas,{" "}
+          <span className="destaque">
+            é a experiência de vida que você sempre sonhou ter
+          </span>{" "}
+          nas férias, e agora pode ser o seu dia a dia!
+        </p>
+      </div>
 
       <div>video</div>
 
-      <div>botao</div>
+      <div>
+        <Botao
+          title="CONHEÇA O TAJ HOME RESORT"
+          className="button_outlined_yellow glow"
+        />
+      </div>
     </div>
   );
 };
