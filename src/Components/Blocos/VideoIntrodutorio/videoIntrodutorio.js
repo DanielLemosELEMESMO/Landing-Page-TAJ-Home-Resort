@@ -21,9 +21,9 @@ const VideoIntrodutorio = (props) => {
         </p>
       </div>
 
-      <div>video</div>
+      <div className="video glow">video</div>
 
-      <div>
+      <div className="CTA-Button">
         <Botao
           title="CONHEÇA O TAJ HOME RESORT"
           className="button_outlined_yellow glow"
