@@ -1,7 +1,7 @@
 import React from "react";
 import "./torres.css";
 import torreAlta from "../../Imagens/torres_altas.png";
-import torreBaixa from "../../Imagens/torres-baixas.png";
+import torreBaixa from "../../Imagens/torres_baixas.png";
 const torres = (props) => {
   return (
     <div className="area-torres">
