@@ -4,7 +4,7 @@
     /* padding-bottom: 50px; */
 }
 
-h2{
+.area-bem-estar h2{
     max-width: 400px;
     width: 80vw;
     margin-left: 20px;
@@ -22,6 +22,7 @@ h2{
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .container-imgagens{
     margin-top: 30px ;
