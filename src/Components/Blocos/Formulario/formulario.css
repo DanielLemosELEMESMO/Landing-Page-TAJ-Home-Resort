@@ -71,3 +71,12 @@ form textarea{
     width: 180px;
     height: 80px;
 }
+.botao-enviar{
+    max-width: 100px;
+    width: 80vw;
+    border-radius: 10px;
+    background-color:#E5B342;
+    color: black;
+    font-weight: bold;
+    padding: 5px 0;
+}

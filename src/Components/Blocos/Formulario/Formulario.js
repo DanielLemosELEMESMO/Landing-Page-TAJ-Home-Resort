@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './formulario.css';
-
-const inputPhone = document.getElementById('telefone');
+import Botao from '../Botao/Botao.js';
 // precisa-se criar regra para o input do telefone, para caso escrevam errado alguma coisa ou coloquem string ao inves de numero
-
+// TA COM BUG MAS FOI QUASE
 function formulario(props) {
+	const [numeric, setNumeric] = useState('');
+	const numericRuler = (e) => {
+		// const num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+		let num = /[A-Z]/i;
+		let result = e.match(num);
+		return result;
+	};
+	const handleChange = (e) => {
+		const element = e.target.value;
+		setNumeric(numericRuler(element));
+	};
+
 	return (
 		<div className='area-form-flex'>
 			<form>
@@ -16,13 +27,14 @@ function formulario(props) {
 				<label reactFor='telefone'>
 					<p>Telefone</p>
 					<input
-						type='number'
+						type='text'
 						key='telefone'
 						placeholder='Telefone com DDD'
+						value={numeric}
+						onChange={(e) => handleChange(e)}
 						required
 					/>
 				</label>
-
 				<label reactFor='cidade'>
 					<p>Cidade</p>
 					<input type='text' key='cidade' required />
@@ -52,7 +64,8 @@ function formulario(props) {
 					<input type='checkbox' key='termo' required />
 					<p>Aceito receber o contato de um consultor</p>
 				</label>
-				{/* colocar aqui o botao */}
+
+				<Botao className='botao-enviar' title='ENVIAR' />
 			</form>
 			<content className='contato-texto'>
 				<h2>Entre em contato conosco e marque uma visita.</h2>
