@@ -6,9 +6,7 @@ import Botao from '../Botao/Botao.js';
 function formulario(props) {
 	const [numeric, setNumeric] = useState('');
 	const numericRuler = (e) => {
-		// const num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-		let num = /[A-Z]/i;
-		let result = e.match(num);
+		let result = e.match(/([A-Z]|[a-z])/g) ? e.length--: e;
 		return result;
 	};
 	const handleChange = (e) => {
