@@ -5,45 +5,56 @@ import Botao from '../Botao/Botao.js';
 // TA COM BUG MAS FOI QUASE
 function formulario(props) {
 	const [numeric, setNumeric] = useState('');
+	
 	const numericRuler = (e) => {
-		let result = e.match(/([A-Z]|[a-z])/g) ? e.length--: e;
+		let result = e.match(/([A-Z]|[a-z])|[!@#$%^&*_+\=[\]{};´``':"\|,.<>/?~¿Øø£¥☻®♥♦¼♣«♠»•α◘ß○π♂Σ♀Φ♪±♫≥☼≤►■◄†↑‡↓↔™¨]/g) ? e.length--: e;
 		return result;
 	};
 	const handleChange = (e) => {
-		const element = e.target.value;
+		let element = e.target.value;
+		if(element.length===1){
+			element=`(${element}`
+		}if(element.length===3){
+			element=`${element})`
+		}if(element.length===4){
+			element=`${element} `
+		}if(element.length===9){
+			element=`${element}-`
+		}
 		setNumeric(numericRuler(element));
 	};
 
 	return (
 		<div className='area-form-flex'>
 			<form>
-				<label reactFor='nome'>
+				<label reactfor='nome'>
 					<p>Nome</p>
 					<input type='text' key='nome' placeholder='Nome completo' required />
 				</label>
 
-				<label reactFor='telefone'>
+				<label reactfor='telefone'>
 					<p>Telefone</p>
 					<input
 						type='text'
 						key='telefone'
+						maxLength={15}
 						placeholder='Telefone com DDD'
 						value={numeric}
 						onChange={(e) => handleChange(e)}
 						required
 					/>
 				</label>
-				<label reactFor='cidade'>
+				<label reactfor='cidade'>
 					<p>Cidade</p>
 					<input type='text' key='cidade' required />
 				</label>
 
-				<label reactFor='estado'>
+				<label reactfor='estado'>
 					<p>Estado</p>
 					<input type='text' key='estado' required />
 				</label>
 
-				<label reactFor='email'>
+				<label reactfor='email'>
 					<p>E-mail</p>
 					<input
 						type='email'
@@ -53,12 +64,12 @@ function formulario(props) {
 					/>
 				</label>
 
-				<label reactFor='mensagem'>
+				<label reactfor='mensagem'>
 					<p>Mensagem</p>
 					<textarea required key='mensagem'></textarea>
 				</label>
 
-				<label reactFor='termo' className='termo'>
+				<label reactfor='termo' className='termo'>
 					<input type='checkbox' key='termo' required />
 					<p>Aceito receber o contato de um consultor</p>
 				</label>
