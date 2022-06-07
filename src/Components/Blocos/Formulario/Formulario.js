@@ -76,7 +76,7 @@ function formulario(props) {
 
 				<Botao className='botao-enviar' title='ENVIAR' />
 			</form>
-			<content className='contato-texto'>
+			<div className='contato-texto'>
 				<h2>Entre em contato conosco e marque uma visita.</h2>
 				<p>
 					Não perca a oportunidade de proporcionar a você e sua família essa
@@ -88,7 +88,7 @@ function formulario(props) {
 					realidade.
 				</p>
 				<img src='' alt='TAJ' />
-			</content>
+			</div>
 		</div>
 	);
 }

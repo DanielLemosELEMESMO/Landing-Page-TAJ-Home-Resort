@@ -1,18 +1,20 @@
 import React from 'react';
 import { render } from './static.js';
-import Title from './components/Title/Title.js';
 import './bem.css';
 function BemEstar(props) {
 	return (
 		<div className='area-bem-estar'>
-			<Title />
+			<h2>
+				Providenciamos os melhores <br />
+				serviços para o seu bem-estar.
+			</h2>
 			<div className='area-imagens-flex'>
 				<div className='area-imagens-bem-estar'>
 					{render.map((obj, index) => (
-						<content className='container-imgagens' key={index}>
+						<div className='container-imgagens' key={index}>
 							<img src={obj.image} />
 							<p>{obj.frase}</p>
-						</content>
+						</div>
 					))}
 				</div>
 				{/* area-imagens-bem-estar */}
