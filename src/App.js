@@ -6,6 +6,7 @@ import Bem from './Components/Blocos/Bem-Estar/Bem.js';
 import Formulario from './Components/Blocos/Formulario/Formulario.js';
 import Oportunidade from './Components/Blocos/Oportunidade/Oportunidade.js';
 import Plantas from './Components/Blocos/Plantas/Plantas.js';
+import Rodape from './Components/Blocos/Rodape/Rodape.js';
 import './style.css';
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
 			<Formulario />
 			<Oportunidade />
 			<Plantas />
+			<Rodape />
 		</div>
 	);
 }

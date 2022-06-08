@@ -4,6 +4,7 @@
     padding-bottom: 30px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 form{
@@ -50,12 +51,13 @@ form textarea{
 }
 .contato-texto{
     max-width: 400px;
+    max-height: 400px;
     text-align: center;
     transform: translateY(100px);
-    max-height: 400px;
 }
 .contato-texto h2{
     max-width: 400px;
+    width: 80vw;
     margin-left: 40px;
     margin-bottom: 10px;
     border-bottom: 3px solid #FFCF26;
@@ -79,4 +81,9 @@ form textarea{
     color: black;
     font-weight: bold;
     padding: 5px 0;
+}
+@media screen and (max-width:500px){
+    .contato-texto{
+        transform: translateY(10%);
+    }
 }

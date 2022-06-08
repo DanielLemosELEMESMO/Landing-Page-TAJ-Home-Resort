@@ -1,7 +1,6 @@
 .area-bem-estar{
     background-color: black;
     width: 100%;
-    /* padding-bottom: 50px; */
 }
 
 .area-bem-estar h2{
@@ -11,7 +10,7 @@
     border-bottom: 3px solid #FFCF26;
 }
 .area-imagens-flex{
-    width: inherit;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
