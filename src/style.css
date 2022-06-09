@@ -10,7 +10,7 @@ h1 {
   font-size: 56px;
 }
 h2 {
-  font-family: "Cinzel", serif;
+  font-family: "Cinzel", sans-serif;
   font-size: 28px;
 }
 p {
@@ -34,10 +34,6 @@ button:hover {
 
 .bloco {
   width: 100%;
-}
-img {
-  width: 100%;
-  height: 100%;
 }
 .video {
   border-style: solid;

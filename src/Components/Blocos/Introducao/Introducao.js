@@ -35,7 +35,7 @@ const Introducao = (props) => {
         className="button_outlined_yellow glow"
       />
 
-      <div class="texto-final">
+      <div className="texto-final">
         <h2>VENHA CONHECER O PARAÍSO DAS ARÁBIAS, LOCALIZADO EM VILA VELHA</h2>
         <Barrinha larg={5} />
       </div>

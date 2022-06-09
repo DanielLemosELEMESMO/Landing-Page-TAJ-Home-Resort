@@ -6,7 +6,7 @@ const VideoIntrodutorio = (props) => {
   return (
     <div className="bloco bloco-videoIntrodutorio">
       <div className="titulo">
-        <h2 className="destaque" styles>
+        <h2 className="destaque">
           No Taj Home Resort, você se apaixona pela sua vida, dia após dia
         </h2>
       </div>
