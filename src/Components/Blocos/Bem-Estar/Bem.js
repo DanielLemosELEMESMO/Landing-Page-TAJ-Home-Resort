@@ -12,6 +12,7 @@ function BemEstar(props) {
 				<div className='area-imagens-bem-estar'>
 					{render.map((obj, index) => (
 						<div className='container-imgagens' key={index}>
+							{/* precisa por o caminho das imagens dentro do arquivo static.js e precisamos definir o tamanho delas */}
 							<img src={obj.image} />
 							<p>{obj.frase}</p>
 						</div>

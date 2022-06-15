@@ -1,6 +1,6 @@
 import React from "react";
 import "./Cabecalho.css";
-import logoPequena from "../../Imagens/desktop_logo_pequena.png";
+import logoPequena from "../../Assets/Imagens/desktop_logo_pequena.png";
 
 const Cabecalho = (props) => {
   return (

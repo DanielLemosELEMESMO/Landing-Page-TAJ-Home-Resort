@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './formulario.css';
-import Botao from '../Botao/Botao.js';
+import Botao from '../../Botao/Botao.js';
 // precisa-se criar regra para o input do telefone, para caso escrevam errado alguma coisa ou coloquem string ao inves de numero
 // TA COM BUG MAS FOI QUASE
 function formulario(props) {
