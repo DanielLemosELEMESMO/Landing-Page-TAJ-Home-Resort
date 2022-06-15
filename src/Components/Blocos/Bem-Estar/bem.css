@@ -1,0 +1,33 @@
+.area-bem-estar{
+    background-color: black;
+    width: 100%;
+}
+
+.area-bem-estar h2{
+    max-width: 400px;
+    width: 80vw;
+    margin-left: 20px;
+    border-bottom: 3px solid #FFCF26;
+}
+.area-imagens-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.area-imagens-bem-estar{
+    max-width: 600px;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.container-imgagens{
+    margin-top: 30px ;
+    border: 2px solid #FFCF26;
+    border-radius: 10px;
+}
+.container-imgagens p{
+   padding: 0 10px;
+}
