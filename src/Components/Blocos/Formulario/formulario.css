@@ -82,7 +82,7 @@ form textarea{
     font-weight: bold;
     padding: 5px 0;
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:830px){
     .contato-texto{
         transform: translateY(10%);
     }

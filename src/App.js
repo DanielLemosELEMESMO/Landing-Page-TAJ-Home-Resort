@@ -14,16 +14,16 @@ import './style.css';
 export default function App() {
 	return (
 		<div className='main'>
-			{/* <Cabecalho /> */}
+			<Cabecalho />
 			<Introducao />
-			{/* <VideoIntrodutorio /> */}
-			{/* <InteriorDoApto /> */}
-			{/* <Torres />
+			{/* <VideoIntrodutorio />
+			<InteriorDoApto /> */}
+			<Torres />
 			<Bem />
 			<Formulario />
 			<Oportunidade />
 			<Plantas />
-			<Rodape /> */}
+			<Rodape />
 		</div>
 	);
 }
