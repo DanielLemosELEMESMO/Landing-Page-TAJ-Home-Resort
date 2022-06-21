@@ -9,6 +9,7 @@ const Plantas = () => {
 			<h2>{title.toUpperCase()}</h2>
 			<div className='img-container'>
 				{plantas.map((object, index) => (
+					// precisa por o caminho das imagens dentro do arquivo static.js e precisamos definir o tamanho delas
 					<img src={object.image} className={object.className} key={index} />
 				))}
 			</div>
