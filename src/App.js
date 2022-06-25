@@ -5,6 +5,7 @@ import Introducao from './Components/Blocos/Introducao/Introducao';
 // import InteriorDoApto from "./Components/Blocos/InteriorDoApto/InteriorDoApto";
 import Torres from './Components/Blocos/Torres/Torres.js';
 import Bem from './Components/Blocos/Bem-Estar/Bem.js';
+import Localizacao from './Components/Blocos/Localizacao/Localizacao.js';
 import Formulario from './Components/Blocos/Formulario/Formulario.js';
 import Oportunidade from './Components/Blocos/Oportunidade/Oportunidade.js';
 import Plantas from './Components/Blocos/Plantas/Plantas.js';
@@ -20,6 +21,7 @@ export default function App() {
 			<InteriorDoApto /> */}
 			<Torres />
 			<Bem />
+			<Localizacao />
 			<Formulario />
 			<Oportunidade />
 			<Plantas />
