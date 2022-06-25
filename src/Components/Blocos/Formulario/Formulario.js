@@ -80,23 +80,27 @@ function formulario(props) {
 					<input type='checkbox' key='termo' required />
 					<p>Aceito receber o contato de um consultor</p>
 				</label>
-
 				<Botao className='botao-enviar' title='ENVIAR' />
 			</form>
 			<div className='contato-texto'>
 				<h2>Entre em contato conosco e marque uma visita.</h2>
 				<p>
-					Não perca a oportunidade de proporcionar a você e sua família essa
-					experiência única.
+					Não perca a <span className='destaque'>oportunidade</span> de
+					proporcionar a você e sua família essa{' '}
+					<span className='destaque'>experiência única.</span>
 				</p>
 				<p>
-					Venha visitar o Taj Home Resort e conhecer mais sobre esse paraíso
-					localizado em Vila Velha, onde os seus sonhos podem se tornar
-					realidade.
+					Venha visitar o Taj Home Resort e conhecer mais sobre esse{' '}
+					<span className='destaque'>paraíso localizado em Vila Velha</span>,
+					onde os seus{' '}
+					<span className='destaque'>sonhos podem se tornar realidade.</span>
 				</p>
-				<img src='' alt='TAJ' />
+				<img
+					src={require('../../Assets/Imagens/desktop_logo_pequena.png')}
+					alt='TAJ'
+				/>
 			</div>
-			<br></br>
+			<br />
 		</div>
 	);
 }
