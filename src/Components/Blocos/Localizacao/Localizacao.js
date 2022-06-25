@@ -1,5 +1,6 @@
 import React from 'react';
 import Mapa from './Mapa.js';
+import { espaco } from './espaco.js';
 import './localizacao.css';
 
 function Localizacao() {
@@ -19,7 +20,7 @@ function Localizacao() {
 					regiões de maior participação econômica e crescimento do Brasil.
 				</span>
 			</p>
-			<br />
+			{espaco(1)}
 			<div className='localizacao-container'>
 				<Mapa className='map-frame' />
 			</div>
@@ -32,7 +33,7 @@ function Localizacao() {
 						Rodovia do Sol, 4300, Bairro Jockey de Itaparica, Vila Velha- ES.
 					</span>
 				</p>
-				<br />
+				{espaco()}
 				<p>
 					Torre Oeste:{' '}
 					<span className='cinzas'>
@@ -54,7 +55,7 @@ function Localizacao() {
 				</p>
 			</div>
 			{/* local-torres */}
-			<br />
+			{espaco(1)}
 		</div>
 		// main-container-localizacao
 	);
