@@ -37,7 +37,7 @@ const Introducao = (props) => {
 
       <div className="texto-final">
         <h2>VENHA CONHECER O PARAÍSO DAS ARÁBIAS, LOCALIZADO EM VILA VELHA</h2>
-        <Barrinha larg={5} />
+        <Barrinha styles={{ width: "50px" }} />
       </div>
     </div>
   );
