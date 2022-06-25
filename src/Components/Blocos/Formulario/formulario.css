@@ -43,21 +43,22 @@ form textarea{
 }
 .termo input{
     width: 20px;
+    margin-right: 20px;
     align-items: center;
 }
 .termo p{
     padding: 0 0;
     color: white;
 }
+/* Area do texto ao lado do formulario */
 .contato-texto{
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 600px;
+    width: 80%;
+    padding-top: calc(50px*2);
     text-align: center;
-    transform: translateY(100px);
 }
 .contato-texto h2{
-    max-width: 400px;
-    width: 80vw;
+    width: 50%;
     margin-left: 40px;
     margin-bottom: 10px;
     border-bottom: 3px solid #FFCF26;
@@ -82,8 +83,8 @@ form textarea{
     font-weight: bold;
     padding: 5px 0;
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:830px){
     .contato-texto{
-        transform: translateY(10%);
+        padding-top: calc(50px/2);
     }
 }
