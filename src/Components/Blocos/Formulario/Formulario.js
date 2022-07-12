@@ -1,34 +1,19 @@
 import React, { useState } from 'react';
 import './formulario.css';
 import Botao from '../Botao/Botao.js';
+import { deleteCaracter } from './delete.js';
+import { addCaracter } from './caracterAdd.js';
+import { numericRuler } from './rulerPhone.js';
+
 // precisa-se criar regra para o input do telefone, para caso escrevam errado alguma coisa ou coloquem string ao inves de numero
 // TA COM BUG MAS FOI QUASE
 function formulario(props) {
 	const [numeric, setNumeric] = useState('');
 
-	const numericRuler = (e) => {
-		let result = e.match(
-			/([A-Z]|[a-z])|[!@#$%^&*_+\=[\]{};´`':"\|,.<>/?~¿Øø£¥☻®♥♦¼♣«♠»•α◘ß○π♂Σ♀Φ♪±♫≥☼≤►■◄†↑‡↓↔™¨]/g
-		)
-			? e.length--
-			: e;
-		return result;
-	};
 	const handleChange = (e) => {
 		let element = e.target.value;
-		if (element.length === 1) {
-			element = `(${element}`;
-		}
-		if (element.length === 3) {
-			element = `${element})`;
-		}
-		if (element.length === 4) {
-			element = `${element} `;
-		}
-		if (element.length === 9) {
-			element = `${element}-`;
-		}
-		setNumeric(numericRuler(element));
+		numericRuler(element);
+		setNumeric(addCaracter(deleteCaracter(element)));
 	};
 
 	return (
