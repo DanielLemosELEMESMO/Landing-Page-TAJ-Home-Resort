@@ -9,7 +9,7 @@ const Introducao = (props) => {
 		<div className='bloco bloco-introducao'>
 			<div className='imagem-grande-desktop'>
 				<img
-					src={require('../../Assets/Imagens/desktop_logo_grande.png')}
+					src={require('../../../assets/imagens/desktop_logo_grande.png')}
 					alt=''
 				/>
 				<h1>Taj Home Resort</h1>

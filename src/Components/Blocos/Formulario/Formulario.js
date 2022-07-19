@@ -1,19 +1,37 @@
 import React, { useState } from 'react';
 import './formulario.css';
 import Botao from '../Botao/Botao.js';
-import { deleteCaracter } from './delete.js';
-import { addCaracter } from './caracterAdd.js';
-import { numericRuler } from './rulerPhone.js';
+import { numericRuler, addCaracter } from './rulerPhone.js';
 
 // precisa-se criar regra para o input do telefone, para caso escrevam errado alguma coisa ou coloquem string ao inves de numero
 // TA COM BUG MAS FOI QUASE
 function formulario(props) {
-	const [numeric, setNumeric] = useState('');
+	const [nome, setNome] = useState('');
+	const [phone, setPhone] = useState('');
+	const [cidade, setCidade] = useState('');
+	const [estado, setEstado] = useState('');
+	const [email, setEmail] = useState('');
+	const [mensagem, setMensagem] = useState('');
 
-	const handleChange = (e) => {
-		let element = e.target.value;
-		numericRuler(element);
-		setNumeric(addCaracter(deleteCaracter(element)));
+	const onSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const response = await fetch('http://localhost:4000/enviar-email', {
+				method: 'POST',
+				body: {
+					nome,
+					telefone: phone,
+					cidade,
+					estado,
+					email,
+					mensagem,
+				},
+			});
+			const content = await response.json();
+			for (let constents of content) console.info(constents);
+		} catch (e) {
+			console.log(e);
+		}
 	};
 
 	return (
@@ -21,7 +39,14 @@ function formulario(props) {
 			<form>
 				<label reactfor='nome'>
 					<p>Nome</p>
-					<input type='text' key='nome' placeholder='Nome completo' required />
+					<input
+						type='text'
+						key='nome'
+						value={nome}
+						onChange={(e) => setNome(e.target.value)}
+						placeholder='Nome completo'
+						required
+					/>
 				</label>
 
 				<label reactfor='telefone'>
@@ -31,19 +56,32 @@ function formulario(props) {
 						key='telefone'
 						maxLength={15}
 						placeholder='Telefone com DDD'
-						value={numeric}
-						onChange={(e) => handleChange(e)}
+						value={phone}
+						onChange={(e) => setPhone(numericRuler(e.target.value))}
+						onKeyUp={(e) => setPhone(addCaracter(e))}
 						required
 					/>
 				</label>
 				<label reactfor='cidade'>
 					<p>Cidade</p>
-					<input type='text' key='cidade' required />
+					<input
+						type='text'
+						key='cidade'
+						value={cidade}
+						onChange={(e) => setCidade(e.target.value)}
+						required
+					/>
 				</label>
 
 				<label reactfor='estado'>
 					<p>Estado</p>
-					<input type='text' key='estado' required />
+					<input
+						type='text'
+						key='estado'
+						value={estado}
+						onChange={(e) => setEstado(e.target.value)}
+						required
+					/>
 				</label>
 
 				<label reactfor='email'>
@@ -51,6 +89,8 @@ function formulario(props) {
 					<input
 						type='email'
 						key='email'
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
 						required
 						placeholder='exemplo@email.com'
 					/>
@@ -58,14 +98,18 @@ function formulario(props) {
 
 				<label reactfor='mensagem'>
 					<p>Mensagem</p>
-					<textarea required key='mensagem'></textarea>
+					<textarea
+						key='mensagem'
+						value={mensagem}
+						onChange={(e) => setMensagem(e.target.value)}
+						maxLength={500}></textarea>
 				</label>
 
 				<label reactfor='termo' className='termo'>
 					<input type='checkbox' key='termo' required />
 					<p>Aceito receber o contato de um consultor</p>
 				</label>
-				<Botao className='botao-enviar' title='ENVIAR' />
+				<Botao className='botao-enviar' title='ENVIAR' onClick={onSubmit} />
 			</form>
 			<div className='contato-texto'>
 				<h2>Entre em contato conosco e marque uma visita.</h2>
@@ -81,7 +125,7 @@ function formulario(props) {
 					<span className='destaque'>sonhos podem se tornar realidade.</span>
 				</p>
 				<img
-					src={require('../../Assets/Imagens/desktop_logo_pequena.png')}
+					src={require('../../../assets/imagens/desktop_logo_pequena.png')}
 					alt='TAJ'
 				/>
 			</div>
