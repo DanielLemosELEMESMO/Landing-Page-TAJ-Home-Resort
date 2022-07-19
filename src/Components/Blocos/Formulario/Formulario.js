@@ -28,7 +28,6 @@ function formulario(props) {
 				},
 			});
 			const content = await response.json();
-			for (let constents of content) console.info(constents);
 		} catch (e) {
 			console.log(e);
 		}
