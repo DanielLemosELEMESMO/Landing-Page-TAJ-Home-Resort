@@ -16,34 +16,17 @@ function formulario(props) {
 	const onSub = async (e) => {
 		e.preventDefault();
 		try {
-			const jsn = JSON.stringify({
-				nome:nome,
-				telefone:telefone,
-				cidade:cidade,
-				estado:estado,
-				email:email,
-				mensagem:mensagem,
-			});
-			console.table({
-				nome:nome,
-				telefone:telefone,
-				cidade:cidade,
-				estado:estado,
-				email:email,
-				mensagem:mensagem,
+			const urlencoded = new URLSearchParams({
+				nome,
+				telefone,
+				cidade,
+				estado,
+				email,
+				mensagem,
 			})
-			const response = await fetch('http://localhost:4000/enviar-email', {
-				method: 'POST',
-				body: {
-					nome,
-					telefone,
-					cidade,
-					estado,
-					email,
-					mensagem,
-				},
+			await fetch('http://localhost:4000/enviar-email', {
+				method: 'POST',	body: urlencoded
 			});
-			const content = await response.json();
 		} catch (e) {
 			console.log(e);
 		}
