@@ -7,20 +7,36 @@ import { numericRuler, addCaracter } from './rulerPhone.js';
 // TA COM BUG MAS FOI QUASE
 function formulario(props) {
 	const [nome, setNome] = useState('');
-	const [phone, setPhone] = useState('');
+	const [telefone, setPhone] = useState('');
 	const [cidade, setCidade] = useState('');
 	const [estado, setEstado] = useState('');
 	const [email, setEmail] = useState('');
 	const [mensagem, setMensagem] = useState('');
 
-	const onSubmit = async (e) => {
+	const onSub = async (e) => {
 		e.preventDefault();
 		try {
+			const jsn = JSON.stringify({
+				nome:nome,
+				telefone:telefone,
+				cidade:cidade,
+				estado:estado,
+				email:email,
+				mensagem:mensagem,
+			});
+			console.table({
+				nome:nome,
+				telefone:telefone,
+				cidade:cidade,
+				estado:estado,
+				email:email,
+				mensagem:mensagem,
+			})
 			const response = await fetch('http://localhost:4000/enviar-email', {
 				method: 'POST',
 				body: {
 					nome,
-					telefone: phone,
+					telefone,
 					cidade,
 					estado,
 					email,
@@ -35,7 +51,7 @@ function formulario(props) {
 
 	return (
 		<div className='area-form-flex'>
-			<form>
+			<form onSubmit={onSub}>
 				<label reactfor='nome'>
 					<p>Nome</p>
 					<input
@@ -55,7 +71,7 @@ function formulario(props) {
 						key='telefone'
 						maxLength={15}
 						placeholder='Telefone com DDD'
-						value={phone}
+						value={telefone}
 						onChange={(e) => setPhone(numericRuler(e.target.value))}
 						onKeyUp={(e) => setPhone(addCaracter(e))}
 						required
@@ -100,7 +116,9 @@ function formulario(props) {
 					<textarea
 						key='mensagem'
 						value={mensagem}
-						onChange={(e) => setMensagem(e.target.value)}
+						onChange={(e) => {
+							setMensagem(e.target.value);
+						}}
 						maxLength={500}></textarea>
 				</label>
 
@@ -108,7 +126,13 @@ function formulario(props) {
 					<input type='checkbox' key='termo' required />
 					<p>Aceito receber o contato de um consultor</p>
 				</label>
-				<Botao className='botao-enviar' title='ENVIAR' onClick={onSubmit} />
+
+				<Botao
+					className='botao-enviar'
+					title='ENVIAR'
+					type='submit'
+					// onClick={onSubmit}
+				/>
 			</form>
 			<div className='contato-texto'>
 				<h2>Entre em contato conosco e marque uma visita.</h2>
